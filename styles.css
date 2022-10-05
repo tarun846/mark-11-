@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 :root {
     --primary-color: #059669;
     /*making color variable, root means entire css */
@@ -5,117 +10,43 @@
     --off-white:#F3F4F6;
 }
 
-hr {
-    margin: 2rem 0rem;
+body{
+    font-family: sans-serif;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
+.glassmorphism  {
+    background: rgba( 255, 255, 255, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-/* body h1 div class are selectors*/
-.margin-md{
-    margin: 2rem;
-}
 
+
+
+nav{
+    display: flex;
+    min-height: 7vh;
+    align-items: center;
+    padding-left: 10px;
+}
 
 /**------- @container-----------**/
 .container {
     padding: 1rem 1rem;
+    align-items: center;
+ 
 }
 
 .container-center {
     max-width: 600px;
     margin: auto;
+    margin-top: 2rem;
 }
 
-/* .container-fluid{
-} */
 
-
-
-/*-----------------@links------------------*/
-.link {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    /* same as padding top,bottom=.5,padding left right=1*/
-}
-
-.link-primary {
-    background-color: var(--primary-color);
-    border-radius: 0.5rem;
-    color: white;
-}
-
-.link-secondary {
-    color: var(--primary-color);
-    border-radius: 0.5rem;
-    border: 1px solid var(--primary-color);
-}
-
-/* look into bem naming convension*/
-
-
-
-/*---------------@list-----------------*/
-.list-non-bullet {
-    list-style: none;
-}
-
-.list-item-inline {
-    display: inline;
-    padding: 0rem 0.5rem;
-}
-
-/*--------------@NAV----------------*/
-.navigation {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    border-bottom-left-radius: 1rem;
-}
-
-.navigation .link {
-    /*inside navigation if link is there(Inheriting)*/
-    color: white;
-}
-
-.navigation .nav-pills {
-    text-align: right;
-}
-
-.navigation .nav-brand {
-    font-weight: bold;
-    font-size: larger;
-}
-
-.navigation .link-active {
-    font-weight: bold;
-}
-
-/*------@header---------*/
-.hero {
-    padding: 2rem;
-}
-
-.hero .hero-image {
-    max-width: 350px;
-    display: block;
-    margin: auto;
-}
-
-.hero .hero-heading {
-    padding-top: 1rem;
-    text-align: center;
-    padding-left: 1rem;
-    font-size: 2rem;
-    color: var(--dark-gray);
-}
-
-.hero .heading-inverted {
-    color: var(--primary-color);
-}
 
 
 /*--------@sections----------*/
@@ -168,8 +99,4 @@ label{
     padding: 2rem;
     font-size: larger;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-footer{
-    /* padding: 1rem; */
-    color: #6B7280;
 }

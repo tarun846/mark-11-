@@ -12,8 +12,12 @@ function checkBirthdayIsLucky(){
     const sum=calculateSum(bdate);
     if(bdate&&luckyNumber.value!=""){
         var message;
-        if(checkLuck(sum)) message="your birthday is lucky.";
-        else message="Your birthday is not lucky.";
+        if(checkLuck(sum)) {
+            message="your birthday is lucky.";
+        }
+        else  {
+            message="Your birthday is not lucky.";
+        }
         outputBox.innerText=message;
     }
     else{
