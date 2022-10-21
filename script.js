@@ -12,10 +12,11 @@ function checkBirthdayIsLucky(){
         outputBox.innerText= ''
         return
     }
+    error.style.display = 'none'
     const bdate=dateOfBirth.value;
     const sum=calculateSum(bdate);
     if(bdate&&luckyNumber.value!=""){
-        error.style.display = 'none'
+  
         var message;
         if(checkLuck(sum)) {
             message="your birthday is lucky.";
