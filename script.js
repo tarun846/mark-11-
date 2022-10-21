@@ -1,19 +1,28 @@
 const dateOfBirth=document.querySelector("#date-of-birth");
-const luckyNumber=document.querySelector("#lucky-number");
+const luckyNumber =document.querySelector("#lucky-number");
 const checkNumberButton=document.querySelector("#check-number-btn");
 const outputBox=document.querySelector("#output-box");
-
+const error = document.querySelector('.error')
 
 console.log('papa2');
 checkNumberButton.addEventListener('click' , checkBirthdayIsLucky )
 function checkBirthdayIsLucky(){
-    // console.log(luckyNumber.value=="");
+    if (luckyNumber.value < 0) {
+        error.style.display = 'block'
+        outputBox.innerText= ''
+        return
+    }
     const bdate=dateOfBirth.value;
     const sum=calculateSum(bdate);
     if(bdate&&luckyNumber.value!=""){
+        error.style.display = 'none'
         var message;
-        if(checkLuck(sum)) message="your birthday is lucky.";
-        else message="Your birthday is not lucky.";
+        if(checkLuck(sum)) {
+            message="your birthday is lucky.";
+        }
+        else  {
+            message="Your birthday is not lucky.";
+        }
         outputBox.innerText=message;
     }
     else{
